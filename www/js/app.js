@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-
+  
     var city = localStorage.getItem("city"); //on récupere la variable localStorage ayant pour clé city, puis on la met dans une variable
     var cardSelector = $("#card"); //on mets notre sélecteur dans une variable
 
@@ -21,14 +21,13 @@ function getWeather() { // on crée une fonction qui récupere la météo avec l
     var tempInCelsius = (temp - 273.15).toFixed(1); 
 
 
-    //Remplissage de la card
-
     cardSelector.append("<ul><li>Ville :<b> " + cityName + "</b></li><li>Temps : " + weatherType + "</li><li> Temperature : " + tempInCelsius + " &deg;C</li></ul>");
     cardSelector.append("<img src='img/m" + iconCode + ".png' alt='Weather Icon' width='80px' height='80px'>");
     });
 
     }
 }
+
 
         function submitForm() { 
 
